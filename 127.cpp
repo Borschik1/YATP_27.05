@@ -13,17 +13,6 @@
 using namespace std;
 
 
-void move(vector<vector<int>>& vec, vector<int>& plug, int num, int path) {
-    for (int i = 0; i < plug.size(); ++i) {
-        if (vec[i][num]) {
-            if (plug[i] > path + 1) {
-                plug[i] = path + 1;
-                move(vec, plug, i, path++);
-            }
-        }
-    }
-}
-
 
 int main() {
     ifstream fin("D:/Desktop/INPUT.txt");
